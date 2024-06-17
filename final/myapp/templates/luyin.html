@@ -1,30 +1,28 @@
+<!-- luyin.html -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <title>实时录音与翻译</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>实时录音与翻译</h1>
-        
-        <label>选择录音语言：</label>
-        <select id="languageSelect">
-            <option value="zh-CN">中文</option>
-            <option value="en">英文</option>
-        </select>
-        <br><br>
-        
-        <button id="recordButton" onclick="startRecording()">开始录音</button>
-        <button id="stopButton" style="display: none;" onclick="stopRecording()">停止录音</button>
-        <p id="status">状态: 等待录音</p>
+    <h1>实时录音与翻译</h1>
+    
+    <label>选择录音语言：</label>
+    <select id="languageSelect">
+        <option value="zh-CN">中文</option>
+        <option value="en">英文</option>
+    </select>
+    <br><br>
+    
+    <button id="recordButton" onclick="startRecording()">开始录音</button>
+    <button id="stopButton" style="display: none;" onclick="stopRecording()">停止录音</button>
+    <p id="status">状态: 等待录音</p>
 
-        <p id="transcription-result"></p>
-        <p id="translation-result"></p>
+    <p id="transcription-result"></p>
+    <p id="translation-result"></p>
 
-        <button onclick="location.href='/'">返回主页</button>
-    </div>
+    <button onclick="location.href='/'">返回主页</button>
 
     <script>
         let mediaRecorder;
